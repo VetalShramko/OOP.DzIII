@@ -32,6 +32,8 @@ public class Main {
 		group1.delStudent(st8);
 		System.out.println("Search Student - " + group1.search("Ruda"));
 		System.out.println(group1.toString());
+		ScannerStudent std= new ScannerStudent();
+		std.scanStud();
 		
 	}
 	
