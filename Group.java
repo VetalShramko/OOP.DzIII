@@ -1,8 +1,7 @@
 package dz;
 
 import java.util.Arrays;
-
-import javax.swing.JOptionPane;
+import java.util.Comparator;
 
 public class Group {
 	private Student[] students = new Student[10];
@@ -65,6 +64,13 @@ public class Group {
 		return null;
 	}
 
+	public void sortStudentsByLastName(Student[] students) {
+		
+		Arrays.sort(students, Comparator.nullsLast(new SortStudentComparator()));
+		for(Student std: students) {
+			System.out.println(std);
+			}
+	}
 	public Student[] getStudents() {
 		return students;
 	}
